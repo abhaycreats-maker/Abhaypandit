@@ -1,6 +1,11 @@
 <!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Abhay Pandey | Portfolio</title>
 
 <style>
@@ -10,67 +15,115 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Arial, Helvetica, sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-line-height:1.6;
 background:#f4f6f9;
 color:#333;
+line-height:1.6;
 }
+
+/* HEADER */
 
 header{
 background:#111827;
 color:white;
-padding:20px 10%;
+padding:18px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-flex-wrap:wrap;
+position:sticky;
+top:0;
+}
+
+header h1{
+font-size:22px;
 }
 
 nav a{
 color:white;
-margin-left:20px;
+margin-left:18px;
 text-decoration:none;
+font-weight:500;
 }
 
 nav a:hover{
-text-decoration:underline;
+color:#3b82f6;
 }
+
+/* HERO */
+
+.hero{
+height:70vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(135deg,#111827,#1f2937);
+color:white;
+flex-direction:column;
+padding:20px;
+}
+
+.hero h2{
+font-size:38px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:20px;
+}
+
+.hero button{
+padding:12px 25px;
+border:none;
+background:#3b82f6;
+color:white;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.hero button:hover{
+background:#2563eb;
+}
+
+/* CONTAINER */
 
 .container{
 width:90%;
 max-width:1100px;
 margin:auto;
-padding:40px 0;
+padding:60px 0;
 }
 
 section{
-margin-bottom:60px;
+margin-bottom:70px;
 }
 
 h2{
 margin-bottom:20px;
-color:#111827;
 border-left:5px solid #3b82f6;
 padding-left:10px;
 }
 
-/* ABOUT SECTION */
+/* ABOUT */
 
 .about{
 display:flex;
+gap:30px;
 flex-wrap:wrap;
 align-items:center;
-gap:30px;
 }
 
 .profile-photo{
-width:180px;
-height:180px;
+width:200px;
+height:200px;
 border-radius:50%;
 overflow:hidden;
-box-shadow:0 4px 15px rgba(0,0,0,0.2);
+box-shadow:0 6px 20px rgba(0,0,0,0.2);
 }
 
 .profile-photo img{
@@ -82,11 +135,12 @@ object-fit:cover;
 .about-text{
 flex:1;
 min-width:250px;
+font-size:17px;
 }
 
 /* SKILLS */
 
-.skills-list{
+.skills{
 display:flex;
 flex-wrap:wrap;
 gap:10px;
@@ -95,44 +149,48 @@ gap:10px;
 .skill{
 background:#3b82f6;
 color:white;
-padding:8px 14px;
+padding:8px 16px;
 border-radius:20px;
 font-size:14px;
 }
 
-/* CARD */
+/* EXPERIENCE */
 
 .card{
 background:white;
-padding:20px;
-border-radius:8px;
-box-shadow:0 2px 8px rgba(0,0,0,0.08);
-margin-bottom:15px;
+padding:25px;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
 }
 
 /* PROJECTS */
 
-.projects-grid{
+.projects{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
-.project-card{
+.project{
 background:white;
 padding:20px;
-border-radius:8px;
-box-shadow:0 2px 8px rgba(0,0,0,0.08);
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+transition:0.3s;
 }
 
-.project-image{
+.project:hover{
+transform:translateY(-6px);
+}
+
+.project-img{
 height:150px;
 background:#ddd;
 border-radius:6px;
+margin-bottom:10px;
 display:flex;
 align-items:center;
 justify-content:center;
-margin-bottom:10px;
 }
 
 /* CONTACT */
@@ -142,144 +200,8 @@ color:#3b82f6;
 text-decoration:none;
 }
 
-footer{
-text-align:center;
-padding:20px;
-background:#111827;
-color:white;
-margin-top:40px;
+.contact a:hover{
+text-decoration:underline;
 }
 
-</style>
-</head>
-
-<body>
-
-<header>
-<h1>Abhay Pandey</h1>
-
-<nav>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#experience">Experience</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-</nav>
-
-</header>
-
-<div class="container">
-
-<section id="about">
-
-<h2>About</h2>
-
-<div class="about">
-
-<div class="profile-photo">
-<img src="profile.png" alt="Abhay Pandey">
-</div>
-
-<div class="about-text">
-<p>Hello! I'm <strong>Abhay Pandey</strong>, a creative professional with experience in video editing and thumbnail designing. I enjoy creating engaging visual content and helping digital creators improve their content quality.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<section id="skills">
-
-<h2>Skills</h2>
-
-<div class="skills-list">
-
-<div class="skill">Video Editing</div>
-<div class="skill">Thumbnail Designing</div>
-
-</div>
-
-</section>
-
-
-<section id="experience">
-
-<h2>Experience</h2>
-
-<div class="card">
-
-<h3>Freelance Video Editor</h3>
-
-<p>Experience: 2 Years</p>
-
-<p>Worked on editing videos and designing thumbnails for online content creators and social media platforms.</p>
-
-</div>
-
-</section>
-
-
-<section id="projects">
-
-<h2>Projects</h2>
-
-<div class="projects-grid">
-
-
-<div class="project-card">
-
-<div class="project-image">Project Image</div>
-
-<h3>Video Editing Project</h3>
-
-<p>Sample project placeholder. Add your video editing project description here.</p>
-
-<p><a href="#">Project Link</a></p>
-
-</div>
-
-
-<div class="project-card">
-
-<div class="project-image">Project Image</div>
-
-<h3>Thumbnail Design Project</h3>
-
-<p>Sample project placeholder. Add your thumbnail design showcase here.</p>
-
-<p><a href="#">Project Link</a></p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section id="contact">
-
-<h2>Contact</h2>
-
-<div class="card contact">
-
-<p>Email: <a href="mailto:abhaycreats@gmail.com">abhaycreats@gmail.com</a></p>
-
-<p>Portfolio: <a href="#">Add your portfolio link</a></p>
-
-<p>Instagram / YouTube: <a href="#">Add your social link</a></p>
-
-</div>
-
-</section>
-
-</div>
-
-<footer>
-
-<p>© 2026 Abhay Pandey | Portfolio</p>
-
-</footer>
-
-</body>
-</html>
+/* FOOT
